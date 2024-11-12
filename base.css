@@ -1,0 +1,391 @@
+
+/* 
+    Código exemplo : https://blog.logrocket.com/create-responsive-mobile-menu-css-without-javascript/
+
+*/
+
+/* Tema *//* import font */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); 
+
+
+/* Setando as cores utilizadas no Projeto */
+:root{
+    --white: #f9f9f9;
+    --black: #36383F;
+    --gray: #85888C;
+} 
+/* variables*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+.header {
+    background-color: #4b779d;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    height: 80px; /* Altura do header */
+    position: relative;
+}
+
+/* Nav menu */
+.nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--black);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .5s ease-out;
+    font-size: 20px;
+}
+
+details {
+    padding: 30px;
+    padding-left: 20px;
+    color: white;
+}
+
+#ajustar_curiosidades {
+    padding-top: 10px;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.menu a{
+    display: block;
+    padding: 30px;
+    color: var(--white);
+}
+
+.menu a:hover{
+    background-color: var(--gray);
+}
+
+/**** Icone do Menu Hamburguer*****/
+
+/*Estilizando a Tag Label */
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}
+
+/* Estilizando a Tag Span */
+.hamb-line {
+    background: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+} 
+
+.hamb-line::before,
+.hamb-line::after{
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+
+/* Escondendo o input checkbox */
+.side-menu {
+    display: none;
+} 
+
+/* Alternar ícone do menu */
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+body:has(.side-menu:checked) {
+  overflow: hidden;
+}
+
+/* carrosel embaixo do header */
+    section.slider {
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+        padding: 0 !important;
+        overflow: hidden;
+    }
+
+    .slider-content {
+        width: 400%;
+        height: auto;
+        display: flex;
+    }
+
+    .slider-content input, .img-mobile {
+        display: none;
+    }
+
+    .slide-box {
+        width: 25%;
+        height: auto;
+        position: relative;
+        text-align: center;
+        transition: 1s;
+    }
+
+    .slide-box img {
+        width: 100%;
+    }
+
+    .nav-manual, .nav-auto {
+        position: absolute;
+        width: 100%;
+        margin-top: 20%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-manual .manual-btn, .nav-auto div {
+        border: 1px solid #f29e38;
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.5s;
+        margin-top: -20px;
+    }
+
+    .nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    .nav-manual .manual-btn:hover {
+        background-color: #f29e38;
+    }
+
+    #radio1:checked ~ .nav-auto .auto-btn1, #radio2:checked ~ .nav-auto .auto-btn2, #radio3:checked ~ .nav-auto .auto-btn3 {
+        background-color: #f29e38;
+    }
+
+    #radio1:checked ~ .primeiro {
+        margin-left: 0%;
+    }
+
+    #radio2:checked ~ .primeiro {
+        margin-left: -25%;
+    }
+
+    #radio3:checked ~ .primeiro {
+        margin-left: -50%;
+    }
+
+#img_logo {
+    width: 80px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+#borda_branca_agendar {
+    border: 1px solid black;
+    width: 120px;
+    height: 50px;
+    margin-top: 80px;
+    margin-left: 30px;
+}
+
+#borda_branca_agendar.dark {
+    border: 1px solid white;
+}
+
+#botao_agendar {
+    background-color: #295377;
+    width: 130px;
+    height: 50px;
+    margin-top: 8px;
+    margin-left: 8px;
+    position: absolute;
+    color: white;
+    line-height: 5px;
+    transition: 0.4s ease-in-out;
+}
+
+#botao_agendar:hover {
+    background-color: #6494bd;
+}
+
+#agendar{
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+body {
+    background-color: #eceaea;
+    font-family: sans-serif;
+    font-size: 23px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+#img_destaque {
+    width: 100%;
+}
+
+.progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background: #4caf50;
+    transition: width 0.2s ease;
+}
+
+.content {
+    padding: 20px;
+}
+
+.trilho {
+    width: 60px;
+    height: 35px;
+    background-color: #c3c3c3;
+    border-radius: 150px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+nav p {
+    margin-top: 10px;
+    margin-left: 30px;
+    color: #f29e38;
+}
+
+.trilho .indicador {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: scale(.9);
+    margin-top: 2px;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    transition: .5s;
+}
+
+.trilho.dark .indicador {
+    left: 30px;
+    background-color: #000;
+}
+
+.trilho.dark {
+    background-color: #4d4d4d;
+}
+
+body {
+    transition: .5s;
+}
+
+body.dark {
+    background-color: #3e4451;
+    color: white;
+}
+
+.texto.dark {
+    color: white;
+}
+
+.titulo {
+    margin-left: 0px;
+}
+
+.carousel__slide {
+    position: relative;
+    flex: 0 0 100%; /* Ajusta a largura do slide */
+    width: 100%;
+    background-color: #CFCFCF;
+    counter-increment: item;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel__slide.dark {
+   background-color: #484d57; /* Altera a cor de fundo quando a classe 'dark' é adicionada */
+}
+
+.carousel__slide:nth-child(even).dark {
+    background-color: #484d57;
+}
+
+@media (max-width: 450px) {
+
+    .img-desktop {
+        display: none;
+    }
+
+    .img-mobile {
+        display: block;
+    }
+
+    .nav-auto, .nav-manual {
+        margin-top: 70%;
+    }
+}
+
+
+@media(min-width: 1000px) and (max-width: 1400px)  {
+
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+    .menu li{
+        float: left;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: var(--gray);
+    }
+
+    .hamb{
+        display: none;
+    }
+}

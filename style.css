@@ -1,0 +1,956 @@
+container
+:root {
+    --primary-color: #99a98f;
+    --decent-color: #d6e8db;
+    --accent-color: #fff;
+    --secondary-color: rgb(9, 189, 9);
+    --font-family: 'Poppins', sans-seri;
+    --text-color: gray;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.nav {
+    z-index: 1;
+}
+
+#link_telefone img {
+    position: absolute;
+    width: 25px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+#link_telefone {
+    float: right;
+    background-color: #f29e38;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+/* carrinho de compras */
+.container_carrinho {
+    width: 900px;
+    max-width: 90vw;
+    margin: auto;
+    text-align: end;
+    padding-top: 10px;
+    margin-top: -45px;
+    transition: transform .5s;
+}
+
+/* Define a cor vermelha apenas quando houver itens no carrinho */
+main .icon-cart span {
+    display: flex;
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+    position: relative;
+    visibility: hidden; /* Oculta o ícone inicialmente */
+}
+
+/* Mostra o ícone quando houver itens no carrinho */
+main .icon-cart span.show {
+    visibility: visible;
+}
+
+svg.dark {
+    color: white;
+}
+
+svg {
+    width: 40px;
+    color: black;
+}
+
+.icon-cart span {
+    float: right;
+    margin-top: 20px;
+    margin-left: -12px;
+}
+
+main .icon-cart span {
+    display: flex;
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+    position: relative;
+}
+
+.cartTab {
+    width: 400px;
+    background-color: #353432;
+    color: #eee;
+    position: fixed;
+    inset: 0 -400px 0 auto;
+    display: grid;
+    grid-template-columns: 70px 1fr 70px;
+    z-index: 1;
+    transition: .5s;
+}
+
+body.showCart .cartTab {
+    inset: 0 0 0 auto;
+}
+
+body.showCart .container_carrinho {
+    transform: translateX(-250px);
+}
+
+.cartTab h3 {
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+    width: 400px;
+}
+
+.cartTab .btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 400px;
+    height: 70px;
+    margin-top: -530px;
+}
+
+.cartTab .btn button {
+    background-color: #E8BC0E;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 505px;
+    height: 50px;
+}
+
+.cartTab .btn .close {
+    background-color: #eee;
+}
+
+.cartTab .listCart .item img {
+    width: 100%;
+}
+
+.cartTab .listCart .item {
+    display: grid;
+    grid-template-columns: 70px 140px 100px 1fr;
+    margin-top: -20px;
+    width: 470px;
+    text-align: center;
+    align-items: center;
+    padding-left: 90px;
+    font-size: 17px;
+}
+
+.totalPrice {
+    margin-left: -25px;
+}
+
+span {
+    margin-left: -5px;
+}
+
+.listCart .quantity span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+    color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.listCart .quantity span:nth-child(2) {
+    background-color: transparent;
+    color: #eee;
+}
+
+.listCart .item:nth-child(even) {
+    background-color: #eee1;
+}
+
+.listCart {
+    overflow: auto;
+    margin-left: -60px;
+    height: 500px;
+    width: 500px;
+}
+
+.cartTab .listCart .item {
+    margin-left: -10px; 
+    margin-bottom: 30px;
+}
+
+.listCart::-webkit-scrollbar {
+    width: 0;
+}
+
+.animate {
+    position: relative;
+    opacity: 0; /* Começa invisível */
+    transform: translateX(-100%); /* Começa à esquerda */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Animação suave */
+}
+
+.animate.visible {
+    opacity: 1; /* Fica visível */
+    transform: translateX(0); /* Move para o centro */
+}
+
+.titulo {
+    color: #f29e38;
+    src: url(Odin\ Rounded\ -\ Bold.otf);
+    font-size: 30px;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+.diminuir_titulo {
+    font-size: 27px;
+}
+
+.texto {
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: left;
+    margin-top: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000000;
+    font-size: 22px;
+}
+
+#foto_gradiente {
+    text-align: center;
+}
+
+#ajustar_foto_gradiente {
+    margin-top: -250px;
+    text-align: center;
+}
+
+#ajustar_foto_raiox {
+    padding-left: 30px;
+}
+
+#ajustar_foto_banho {
+    padding-left: 40px;
+}
+
+.img_locais {
+    width: 100%;
+    padding: 10px;
+    height: auto;
+    border-radius: 30px;
+    margin-top: 30px;
+}
+
+#duas_colunas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+}
+
+.nosso_diferencial {
+    background-color: #7eb3e2;
+    margin: 50px auto;
+    width: 300px;
+    height: 80px;
+    text-align: center; 
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    border-radius: 20px; 
+    color: purple;
+    font-weight: 600;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#subir_diferencial {
+    margin-top: -100px;
+}
+
+#links_uteis {
+    padding-left: 50px;
+    padding-top: 30px;
+    color: #fd9f2b;
+    font-weight: 100;
+}
+
+.links a {
+    text-decoration: none;
+    color: #f0b56c;
+    padding: 20px;
+}
+
+.links {
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+hr {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/* marcas que trabalhamos */
+    @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+    :root {
+    --marquee-width: 80vw;
+    --marquee-height: 20vh;
+    /* --marquee-elements: 12; */ /* defined with JavaScript */
+    --marquee-elements-displayed: 5;
+    --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+    --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+    }
+
+    .marquee {
+    width: var(--marquee-width);
+    height: var(--marquee-height);
+    background-color: #eceaea;
+    color: #eee;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    }
+
+    .marquee.dark {
+        background-color: #3e4451;
+    }
+
+    .marquee:before, .marquee:after {
+    position: absolute;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
+    }
+
+    .marquee-content {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    animation: scrolling var(--marquee-animation-duration) linear infinite;
+    }
+
+    /* .marquee-content:hover {
+    animation-play-state: paused;
+    } */
+    @keyframes scrolling {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
+    }
+    
+    .marquee-content li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    flex-shrink: 0;
+    width: var(--marquee-element-width);
+    max-height: 100%;
+    font-size: calc(var(--marquee-height)*3/4); /* 5rem; */
+    white-space: nowrap;
+    }
+
+    .marquee-content li img {
+    width: 100%;
+    /* height: 100%; */
+    border: 2px solid #eee;
+    }
+
+    @media (max-width: 600px) {
+    html { font-size: 12px; }
+    :root {
+        --marquee-width: 100vw;
+        --marquee-height: 16vh;
+        --marquee-elements-displayed: 3;
+    }
+    .marquee:before, .marquee:after { width: 5rem; }
+    }
+
+/* mais vendidos */
+.container {
+    position: relative;
+    padding: 15px;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  
+  .gallery-wrapper {
+    overflow-x: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 30px;
+    width: 100%;
+    padding: 20px; /* Aumenta o padding para afastar os itens da borda */
+    height: 300px;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 80px;
+    width: 100%;
+    padding: 10px; /* Aumenta o padding para afastar os itens da borda */
+    height: 250px;
+    border-radius: 20px;
+    border: 1px solid #CFCFCF;
+  }
+
+    .item {
+        width: 80px;
+        height: 110px;
+        flex-shrink: 0;
+        transition: all 600ms ease-in-out;
+        opacity: 0.5;
+        margin: 10px; /* Adiciona margem ao redor de cada item */
+    }    
+
+    .titulo_mais_vendidos {
+        white-space: nowrap;
+        font-size: 30px;
+        margin-left: -85px;
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+    }
+
+    .texto_mais_vendidos {
+        font-size: 20px;
+        margin-top: 20px;
+        display: block;
+        width: 200px;
+        margin-left: -85px;
+    }
+
+    .preco {
+        margin-left: -70px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+  
+    .container {
+        display: flex;
+        flex-direction: column; /* Garante que os elementos fiquem um embaixo do outro */
+    }
+
+    .container a {
+        margin-left: -200px;
+        margin-top: 20px;
+        background-color: #295377;
+        width: 300px;
+        padding: 10px;
+        padding-left: 100px;
+        color: white;
+        border-radius: 10px;
+        transition: 0.5s;
+    }
+
+    .container a:hover {
+        background-color: #7da4c6;
+    }
+    
+  .current-item {
+    opacity: 1;
+  }
+  
+  /* This is from w3schools */
+  /* 
+  https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .gallery-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .gallery-wrapper {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+/* div de qual raça é melhor para voçê */
+#entrar_em_contato {
+    font-size: 20px;
+    background-color: #cfcfcf;
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-left: 20px;
+    border-radius: 20px;
+    color: black;
+    font-weight: bold;
+    padding-bottom: 50px;
+}
+
+.caixa {
+    position: relative;
+    margin-left: 30px;
+    margin-right: 30px;
+    height: auto;
+    overflow: hidden;
+    transition: height 0.6s ease-in-out;
+}
+
+#mensagem {
+    display: none; /* Oculta inicialmente */
+    margin-top: 40px;
+    font-size: 18px;
+    color: black;
+}
+
+#resultado {
+    display: none; /* Esconde inicialmente */
+}
+
+#entrar_em_contato a {
+    background-color: #7eb3e2;
+    padding: 10px;
+    color: purple;
+    border-radius: 10px;
+    transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out;
+}
+
+#entrar_em_contato a:hover {
+    background-color: #a6d0f5; /* Cor ao passar o mouse */
+    color: rgb(229, 114, 229); /* Cor do texto ao passar o mouse */
+}
+
+#entrar_em_contato input {
+    width: 50px;
+    height: 30px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: -10px;
+}
+
+#entrar_em_contato img {
+    width: 30px;
+    margin-top: 25px;
+}
+
+#mensagem, #imagem-animal {
+    display: none; /* Esconde inicialmente */
+}
+
+.nome_pergunta {
+    font-size: 20px;
+    color: black;
+    margin-bottom: -15px;
+    margin-top: -50px;
+    margin-left: -30px;
+    padding: 20px;
+}
+
+#descer_titulo_deficiencia {
+    margin-top: 30px;
+    margin-left: -30px;
+}
+
+#descer_titulo_espaco {
+    margin-top: 30px;
+}
+
+/* feedback */
+#feedback {
+    color: #f29e38;
+    font-size: 25px;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+* {
+    box-sizing: border-box;
+    scrollbar-color: transparent transparent; /* thumb and track color */
+    scrollbar-width: 0px;
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+}
+
+* {
+    -ms-overflow-style: none;
+}
+
+ol, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel {
+    position: relative;
+    padding-top: 75%;
+    filter: drop-shadow(0 0 10px #0003);
+    perspective: 1000px; /* Aumentado para mais profundidade */
+    width: 300px;
+    margin: 40px auto;
+}
+
+.carousel__viewport {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    counter-reset: item;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel__slide:nth-child(even) {
+    background-color: #CFCFCF;
+}
+
+.carousel {
+    border-radius: 20px;
+}
+
+.carousel__slide:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -40%, 70px);
+    font-size: 2em;
+}
+
+.carousel__snapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+}
+
+.carousel__snapper img {
+    width: 25px;
+    padding-left: 10px;
+}
+
+.carousel__snapper #logo {
+    width: 130px;
+    padding-left: 90px;
+}
+
+/* Ocultar a barra de rolagem */
+.carousel__viewport::-webkit-scrollbar {
+    display: none;
+}
+
+.texto_feedback {
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 20px;
+    text-align: justify;
+}
+
+@media (hover: hover) {
+    .carousel__snapper {
+        animation-name: tonext, snap;
+        animation-timing-function: ease;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+
+    .carousel__slide:last-child .carousel__snapper {
+        animation-name: tostart, snap;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .carousel__snapper {
+        animation-name: none;
+    }
+}
+
+.carousel:hover .carousel__snapper,
+.carousel:focus-within .carousel__snapper {
+    animation-name: none;
+}
+
+.carousel__navigation {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+.carousel__navigation-list,
+.carousel__navigation-item {
+    display: inline-block;
+}
+
+.carousel__navigation-button {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #333;
+    background-clip: content-box;
+    border: 0.25rem solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+    transition: transform 0.1s;
+}
+
+.carousel::before,
+.carousel::after,
+.carousel__prev,
+.carousel__next {
+    position: absolute;
+    top: 0;
+    margin-top: 37.5%;
+    width: 3rem; /* Ajuste a largura dos botões de navegação conforme necessário */
+    height: 3rem; /* Ajuste a altura dos botões de navegação conforme necessário */
+    transform: translateY(-50%);
+    border-radius: 50%;
+    font-size: 0;
+    outline: 0;
+}
+
+.carousel::before,
+.carousel__prev {
+    left: -1rem;
+}
+
+.carousel::after,
+.carousel__next {
+    right: -1rem;
+}
+
+.nome_da_pessoa_no_feedback {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.img_feedback {
+    width: 25px;
+    padding-left: 5px;
+    margin-top: -50px;
+}
+
+.data_feedback, .data_feedback_outros, .data_feedback_outros_2 {
+    font-size: 18px;
+    margin-left: 20px;
+    margin-top: 40px; /* ajuste padrão para todos */
+}
+
+
+#logo {
+    width: 40px;
+    float: right;
+    padding-right: 10px;
+    margin-top: -30px;
+}
+
+#botao_voltar_para_cima {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 999;
+    background-color: #f0b56c;
+    border-radius: 50%; /* Melhorar o arredondamento */
+    width: 55px; /* Definir largura e altura para garantir o círculo perfeito */
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza o conteúdo */
+    box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.1); /* Adiciona um sombreamento */
+}
+
+#botao_voltar_para_cima img {
+    width: 100%; /* Proporcional ao tamanho do botão */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 50%; /* Garante que a imagem também seja circular */
+}
+
+#logo_do_footer {
+    text-align: center;
+    padding-top: 20px;
+}
+
+#logo_do_footer img {
+    width: 90px;
+}
+
+#foto_gradiente img {
+    text-align: center;
+    width: 350px;
+}
+
+#ajustar_foto_gradiente {
+    margin-top: -200px;
+}
+
+#ajustar_foto_raiox {
+    margin-left: -30px;
+    margin-top: -100px;
+}
+
+#ajustar_foto_banho {
+    margin-left: -40px;
+    border-radius: 30px;
+    margin-top: -50px;
+}
+
+.content {
+    padding: 20px;
+}
+
+
+form {
+    max-width: 100%;
+    width: 100%;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 16px;
+}
+
+select, input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+select[size] {
+    height: auto;
+    overflow-y: auto;
+}
+
+button {
+    width: 100%;
+    background-color: #2874a7;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; 
+}
+
+button:hover {
+    background-color: #f59930;
+}
+
+#result, #imagesContainer {
+    margin-top: 20px;
+}
+
+#imagesContainer {
+    display: flex;
+    justify-content: center; /* Centraliza as imagens */
+    flex-wrap: wrap; /* Permite que as imagens se movam para a linha abaixo se não houver espaço suficiente */
+}
+
+#imagesContainer img {
+    max-width: 60%; /* Limita a largura das imagens */
+    height: auto;
+    margin: 10px; /* Espaçamento entre as imagens */
+}
+
+
+footer {
+    background-color: #295377;
+    height: 350px;
+    font-size: 17px;
+    margin-left: -20px;
+}
+
+@media (max-width: 350px) {
+
+    
+    #divBusca {
+        background-color: #E0EEEE;
+        border: solid 2px #5F9EA0;
+        border-radius: 10px;
+        width: 160px;
+        height: 32px;
+        margin-top: -50px;
+        margin-left: 95px;
+        display: flex;
+        align-items: center; /* Centraliza verticalmente */
+    }
+
+    #txtBusca {
+        background-color: transparent;
+        margin: -20px;
+        font-size: 18px;
+        border: none;
+        height: 100%; /* Ajusta a altura para que se ajuste ao contêiner */
+        width: 100%; /* Ajusta a largura para preencher o espaço restante */
+        box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura total */
+    }
+
+    #foto_gradiente img {
+        width: 100%; 
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 30px;
+    }
+
+    #ajustar_foto_raiox {
+        margin-top: -140px;
+    }
+
+    .carousel {
+        position: relative;
+        padding-top: 75%;
+        filter: drop-shadow(0 0 10px #0003);
+        perspective: 100px;
+        margin: 40px auto;
+        height: 300px;
+    }
+
+    form {
+        max-width: 500px;
+    }
+
+    button {
+        width: auto;
+        display: inline-block;
+    }
+    
+    footer {
+        font-size: 15px;
+        margin-left: -30px;
+        height: 300px;
+    }
+}

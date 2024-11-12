@@ -1,0 +1,203 @@
+<!-- 
+    Este projeto é desenvolvido em conjunto com a disciplina de Programação Web I da Etec Polivalente de Americana 
+    e tem como a finalidade de estudar e aprofundar os conhecimentos  em HTML, CSS e JS.
+
+    Autores:
+    Turma:
+    Data: 
+ -->
+
+ <!DOCTYPE html>
+ <html lang="pt-br">
+     <head>
+             <!-- Required meta tags -->
+             <meta charset="utf-8">
+             <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+             <!-- Sobre o WebSite -->
+ 
+             <title>Pet.Net</title>
+             <link rel="icon" href="favicon.ico">
+             <meta name="author" content="Samuel Vieira Leonardo Carrilho Pietro Gimenez Octávio Augusto Pedro Zago Pedro Rodrigues">
+             <meta name="description" content="Projeto feito em parceria com a IBM">
+             <meta name="keywords" content="Pet.Net">
+             <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+             <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+             <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+             <link rel="stylesheet" href="base.css">
+             <link rel="stylesheet" href="style.css">
+             <link rel="stylesheet" href="curiosidades.css">
+         </head>
+  
+    <body>
+        <!-- Navigation bar -->
+    <header class="header">
+
+        <!-- Logo -->
+        <a href="index.html">
+            <img id="img_logo" src="imagens/logo.png" alt="">
+        </a>
+
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+
+       <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+            
+                <details>
+                    <summary>Sobre Nós</summary>
+
+                    <p><li><a href="servicos.html">Serviços</a></li></p>
+                    <p><li><a href="contato.html">Contato</a></li></p>
+                    <p><li><a href="quem_somos.html">Quem Somos</a></li></p>
+                </details>
+
+                <li><a href="pet_ofertas.html">Pet Ofertas</a></li>
+                <li id="ajustar_curiosidades"><a href="curiosidades.html">Curiosidades</a></li>
+            </ul>
+
+            <!-- Trilho div inside the menu -->
+            <p>Modo claro e escuro</p>
+            <div class="trilho" id="trilho">
+                <div class="indicador"></div>
+            </div>
+        </nav>
+
+        <a href="" id="whatsapp-link">
+            <div id="link_telefone">
+                <img src="imagens/link_telefone.png" alt="">
+            </div>
+        </a>
+  
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <script src="script.js"></script>
+
+    </header>
+        
+        <main>
+            
+            <p class="titulo diminuir_titulo">Veja qual é a melhor raça para você</p>
+
+            <div class="caixa" id="caixa">
+            <div id="entrar_em_contato">
+                <br>
+                <p class="nome_pergunta">Coloque uma característica emocional sua <br>(ex: Eu me irrito com facilidade)</p>
+                <input type="radio" name="caracteristica-emocional" value="calmo"> Calmo(a)
+                <br>
+                <input type="radio" name="caracteristica-emocional" value="irrita"> Me irrito com facilidade
+                <br>
+                <input type="radio" name="caracteristica-emocional" value="ativo"> Ativo(a)
+                <br>
+    
+                <p class="nome_pergunta" id="descer_titulo_deficiencia">Você tem alguma deficiência?</p>
+                <input type="radio" name="deficiencia" value="sim"> Sim
+                <br>
+                <input type="radio" name="deficiencia" value="não"> Não
+                <br>
+    
+                <p class="nome_pergunta" id="descer_titulo_deficiencia">Você dispõe de espaço suficiente para cuidar de um animal de estimação?</p>
+                <input type="radio" name="espaco" value="muito"> Muito
+                <br>
+                <input type="radio" name="espaco" value="pouco"> Pouco
+                <br><br>
+    
+                <a href="#" id="enviar-pedido">Enviar Pedido</a>
+                
+                <!-- Div para exibir a mensagem e a imagem -->
+                <div id="resultado" style="margin-top: 20px;">
+                <p id="mensagem"></p>
+                <img id="imagem-animal" src="" alt="Raça recomendada" style="width:200px; display: none;">
+                </div>
+            </div>
+            </div>
+    
+            <br><br>
+    
+            <h1 id="Formulario_forms">Formulário de Recomendação de Ração para Cães</h1>
+            <br>
+    <form id="dogForm">
+        <label for="raca_cao">Raça do cão:</label>
+        <select id="raca_cao" name="raca_cao" size="3" required>
+            <option value="bulldog-ingles">Bulldog Inglês</option>
+            <option value="bulldog-frances">Bulldog Francês</option>
+            <option value="beagle">Beagle</option>
+            <option value="border-collie">Border Collie</option>
+            <option value="chihuahua">Chihuahua</option>
+            <option value="golden-retriever">Golden Retriever</option>
+            <option value="labrador-retriever">Labrador Retriever</option>
+            <option value="pinscher">Pinscher</option>
+            <option value="poodle">Poodle</option>
+            <option value="rottweiler">Rottweiler</option>
+            <option value="shih-tzu">Shih Tzu</option>
+            <option value="yorkshire">Yorkshire</option>
+            <option value="dachshund">Dachshund</option>
+            <option value="schnauzer">Schnauzer</option>
+            <option value="pitbull">Pitbull</option>
+            <option value="akita">Akita</option>
+            <option value="maltes">Maltês</option>
+            <option value="boxer">Boxer</option>
+            <option value="husky-siberiano">Husky Siberiano</option>
+            <option value="cocker-spaniel">Cocker Spaniel</option>
+            <option value="pug">Pug</option>
+            <option value="dalmata">Dálmata</option>
+            <option value="boston-terrier">Boston Terrier</option>
+            <option value="weimaraner">Weimaraner</option>
+            <option value="samoyed">Samoyed</option>
+            <option value="doberman">Doberman</option>
+        </select>
+
+        <label for="idade">Idade do cão (de 1 à 12 anos):</label>
+        <input type="number" id="idade" name="idade" required>
+
+        <button type="submit">Enviar</button>
+        <br><br>
+        <button type="reset" id="clearButton">Limpar</button>
+    </form>
+
+    <div id="result"></div>
+    <div id="imagesContainer"></div>
+    
+           <script src="forms_raca.js"></script>
+
+           <div id="botao_voltar_para_cima" onclick="scrollToTop()" style="display: none;">
+                <img src="imagens/seta_para_cima.png" alt="">
+            </div>
+        </main>
+
+        <footer>
+
+            <div id="links_uteis">
+                Links úteis
+            </div>
+    
+            <div class="links">
+                <a href="">(19) 3648-8720</a>
+                <a href="">Hospital Veterinário</a>
+            </div>
+    
+            <div class="links">
+                <a href="">Banho & Tosa</a>
+            </div>
+    
+            <br>
+    
+            <hr>
+    
+            <div class="links">
+                <a href="">Traga seu pet e nos faça uma visita</a>
+            </div>
+    
+            <div id="logo_do_footer">
+                <img src="imagens/logo.png" alt="">
+            </div>
+    
+        </footer>
+        <script src="script.js"></script>
+        <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!-- 
+    Este projeto é desenvolvido em conjunto com a disciplina de Programação Web I da Etec Polivalente de Americana 
+    e tem como a finalidade de estudar e aprofundar os conhecimentos  em HTML, CSS e JS.
+
+    Autores:
+    Turma:
+    Data: 
+ -->
+
+ <!DOCTYPE html>
+ <html lang="pt-br">
+     <head>
+             <!-- Required meta tags -->
+             <meta charset="utf-8">
+             <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+             <!-- Sobre o WebSite -->
+ 
+             <title>Contato</title>
+             <link rel="icon" href="favicon.ico">
+             <meta name="author" content="Samuel Vieira Leonardo Carrilho Pietro Gimenez Octávio Augusto Pedro Zago Pedro Rodrigues">
+             <meta name="description" content="Projeto feito em parceria com a IBM">
+             <meta name="keywords" content="Pet.Net">
+             <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+             <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+             <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+             <link rel="stylesheet" href="base.css">
+             <link rel="stylesheet" href="contato.css">
+         </head>
+  
+     <body>
+     
+        <div class="container">
+         <!-- Cabeçalho -->
+          <!-- Navigation bar -->
+        <header class="header">
+
+            <!-- Logo -->
+            <a href="index.html">
+                <img id="img_logo" src="imagens/logo.png" alt="">
+            </a>
+
+            <!-- Hamburger icon -->
+            <input class="side-menu" type="checkbox" id="side-menu"/>
+            <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+
+            <!-- Menu -->
+            <nav class="nav">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                
+                    <details>
+                        <summary>Sobre Nós</summary>
+    
+                        <p><li><a href="servicos.html">Serviços</a></li></p>
+                        <p><li><a href="contato.html">Contato</a></li></p>
+                        <p><li><a href="quem_somos.html">Quem Somos</a></li></p>
+                    </details>
+    
+                    <li><a href="pet_ofertas.html">Pet Ofertas</a></li>
+                    <li id="ajustar_curiosidades"><a href="curiosidades.html">Curiosidades</a></li>
+                </ul>
+
+                <!-- Trilho div inside the menu -->
+                <p>Modo claro e escuro</p>
+                <div class="trilho" id="trilho">
+                    <div class="indicador"></div>
+                </div>
+            </nav>
+
+            <a href="" id="whatsapp-link">
+                <div id="link_telefone">
+                    <img src="imagens/link_telefone.png" alt="">
+                </div>
+            </a>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="content">
+            </div>
+
+        </header>
+ 
+ 
+         <!-- Conteúdo Principal -->
+ 
+         <main>
+
+            <section class="slider">
+                <div class="slider-content">
+                    <input type="radio" name="btn-radio" id="radio1">
+                    <input type="radio" name="btn-radio" id="radio2">
+                    <input type="radio" name="btn-radio" id="radio3">
+    
+                    <div class="slide-box primeiro">
+                        <img class="img-desktop" src="imagens/Montagem_Pc_4.png" alt="">
+                        <img class="img-mobile" src="imagens/Montagem_cell_4.png" alt="">
+                    </div>
+    
+                    <div class="slide-box segundo">
+                        <img class="img-desktop" src="imagens/Montagem_Pc_2.png" alt="">
+                        <img class="img-mobile" src="imagens/Montagem_Cell_2.png" alt="">
+                    </div>
+    
+                    <div class="slide-box terceiro">
+                        <img class="img-desktop" src="imagens/Montagem_pc_3.png" alt="">
+                        <img class="img-mobile" src="imagens/Montagem_cell_3.png" alt="">
+                    </div>
+    
+                    <div class="nav-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                    </div>
+    
+                    <div class="nav-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                    </div>
+                </div>
+            </section>
+            
+            <a class="link-zap" href="https://web.whatsapp.com/send?phone=5519999999999" target="_blank">
+                <img src="imagens/whatsapp logo.png" alt="">
+                <i class="fa fa-whatsapp"></i>
+            </a>
+            <br><br><br><br>
+            <div id="borda_forms">
+                <div class="caixa">
+                    <div id="entrar_em_contato">
+                        Entrar em Contato
+
+                        <br>
+                        <img src="imagens/icon-usuario.png" alt="">
+                        <input type="text" placeholder="Nome">
+                        <br>
+                        <img src="imagens/icon-email.png" alt="">
+                        <input type="text" placeholder="Email">
+                        <br>
+                        <img src="imagens/icon-telefone.png" alt="">
+                        <input type="text" placeholder="Telefone">
+                        <br><br>
+
+                        <a href="">Enviar Pedido</a>
+                    </div>
+        
+                </div>
+            </div>
+
+            <div id="mapa">
+                Onde estamos Localizados
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117763.7654033527!2d-47.37318141999882!3d-22.723867389981482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c890a71cafb7ff%3A0x53f1339f749c58bd!2sAmericana%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1727349278097!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+         </main>
+ 
+         <!-- Rodape -->
+         <footer>
+            <div id="links_uteis">
+                Links úteis
+            </div>
+    
+            <div class="links">
+                <a href="">(19) 3648-8720</a>
+                <a href="">Hospital Veterinário</a>
+            </div>
+    
+            <div class="links">
+                <a href="">Banho & Tosa</a>
+            </div>
+    
+            <br>
+    
+            <hr>
+    
+            <div class="links">
+                <a href="">Traga seu pet e nos faça uma visita</a>
+            </div>
+    
+            <div id="logo_do_footer">
+                <img src="imagens/logo.png" alt="">
+            </div>
+    
+         </footer>
+         <script src="script.js"></script>
+         <script src="contato.js"></script>
+     </body>
+ </html>

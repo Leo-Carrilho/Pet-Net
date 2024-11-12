@@ -1,0 +1,204 @@
+nav {
+    z-index: 1;
+}
+
+#link_telefone img {
+    position: absolute;
+    width: 25px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+#link_telefone {
+    float: right;
+    background-color: #f29e38;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.dark #img_destaque {
+    content: url('imagens/img_destaque_servicos_dark.png'); /* Troca a imagem no modo escuro */
+}
+
+.dark .faq_container {
+    background-color: #484d57;
+    border: #484d57;
+}
+
+.ajustar_imagens_servicos {
+    display: flex;
+    flex-direction: column; /* Coloca as imagens em uma coluna */
+    align-items: center; /* Centraliza as imagens horizontalmente */
+    overflow: hidden; /* Esconde qualquer conteúdo que sai dos limites */
+}
+
+.ajustar_imagens_servicos img {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    margin: 10px 0; /* Espaçamento entre as imagens */
+    opacity: 0; /* Começa invisível */
+    transform: translateX(-100%); /* Posiciona fora da tela à esquerda */
+    transition: transform 0.7s ease-out, opacity 0.7s ease-out; /* Define a transição suave */
+}
+
+.ajustar_imagens_servicos.img-visible img {
+    opacity: 1; /* Torna a imagem visível */
+    transform: translateX(0); /* Move a imagem para sua posição original */
+}
+
+.faq_container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 330px;
+    margin: 40px auto;
+    background-color: #cfcfcf;
+    box-shadow: 8px 5px 10px 5px rgba(0, 0, 0, 0.2); 
+    border-radius: 20px;
+    margin-top: 100px;
+}
+
+.faq-header {
+    background-color: #7eb3e2;
+    color: purple;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+    border-radius: 15px 15px 0 0;
+}
+
+.faq-question {
+    padding: 20px;
+    padding-left: 5px;
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.faq-question.active::after {
+    content: '–';
+}
+
+.faq-answer {
+    padding: 0 10px;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 1s ease, opacity 0.5s ease;
+}
+
+.nosso_servico {
+    line-height: 1.5;
+}
+
+.titulo {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #f29e38;
+    font-weight: bold;
+}
+
+.faq-answer.active {
+    max-height: 1300px;
+    opacity: 1;
+}
+
+.ajustar_imagens_servicos {
+    text-align: center;
+}
+
+.ajustar_imagens_servicos img {
+    width: 100%; 
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+}
+
+footer {
+    background-color: #295377;
+    height: 350px;
+    margin-left: -20px;
+    font-size: 17px;
+}
+
+#logo_do_footer {
+    text-align: center;
+    padding-top: 20px;
+}
+
+#logo_do_footer img {
+    width: 90px;
+}
+
+#links_uteis {
+    padding-left: 50px;
+    padding-top: 30px;
+    color: #fd9f2b;
+    font-weight: 100;
+}
+
+.links a {
+    text-decoration: none;
+    color: #f0b56c;
+    padding: 20px;
+}
+
+.links {
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+hr {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#botao_voltar_para_cima {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 999;
+    background-color: #f0b56c;
+    border-radius: 50%; /* Melhorar o arredondamento */
+    width: 55px; /* Definir largura e altura para garantir o círculo perfeito */
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza o conteúdo */
+    box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.1); /* Adiciona um sombreamento */
+}
+
+#botao_voltar_para_cima img {
+    width: 100%; /* Proporcional ao tamanho do botão */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 50%; /* Garante que a imagem também seja circular */
+}
+
+@media (max-width: 350px) {
+
+    .faq_container {
+        width: 280px;
+    }
+
+    .faq-question {
+        padding: 15px;
+    }
+
+    .ajustar_imagens_servicos img {
+        width: 300px; 
+    }
+    
+    footer {
+        font-size: 15px;
+        margin-left: -30px;
+        height: 300px;
+    }
+}

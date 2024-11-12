@@ -1,0 +1,208 @@
+<!-- 
+    Este projeto é desenvolvido em conjunto com a disciplina de Programação Web I da Etec Polivalente de Americana 
+    e tem como a finalidade de estudar e aprofundar os conhecimentos  em HTML, CSS e JS.
+
+    Autores:
+    Turma:
+    Data: 
+ -->
+
+ <!DOCTYPE html>
+ <html lang="pt-br">
+     <head>
+             <!-- Required meta tags -->
+             <meta charset="utf-8">
+             <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+             <!-- Sobre o WebSite -->
+ 
+             <title>Serviços</title>
+             <link rel="icon" href="favicon.ico">
+             <meta name="author" content="Samuel Vieira Leonardo Carrilho Pietro Gimenez Octávio Augusto Pedro Zago Pedro Rodrigues">
+             <meta name="description" content="Projeto feito em parceria com a IBM">
+             <meta name="keywords" content="Pet.Net">
+             <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+             <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+             <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+             <link rel="stylesheet" href="base.css">
+             <link rel="stylesheet" href="servicos.css">
+         </head>
+  
+     <body>
+     
+          <!-- Navigation bar -->
+         <header class="header">
+
+            <!-- Logo -->
+            <a href="index.html">
+                <img id="img_logo" src="imagens/logo.png" alt="">
+            </a>
+
+            <!-- Hamburger icon -->
+            <input class="side-menu" type="checkbox" id="side-menu"/>
+            <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+            <!-- Menu -->
+            <nav class="nav">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="pet_ofertas.html">Pet Ofertas</a></li>
+                </ul>
+
+                <!-- Trilho div inside the menu -->
+                <p>Modo claro e escuro</p>
+                <div class="trilho" id="trilho">
+                    <div class="indicador"></div>
+                </div>
+            </nav>
+
+            <a href="" id="whatsapp-link">
+                <div id="link_telefone">
+                    <img src="imagens/link_telefone.png" alt="">
+                </div>
+            </a>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="content">
+                <div style="height: 2000px;"></div>
+            </div>
+         </header>
+ 
+         <!-- Conteúdo Principal -->
+         <main>
+
+            <section class="slider">
+                <div class="slider-content">
+                    <input type="radio" name="btn-radio" id="radio1">
+                    <input type="radio" name="btn-radio" id="radio2">
+                    <input type="radio" name="btn-radio" id="radio3">
+    
+                    <div class="slide-box primeiro">
+                        <img class="img-desktop" src="imagens/Montagem_Pc_4.png" alt="">
+                        <img class="img-mobile" src="imagens/Montagem_cell_4.png" alt="">
+                    </div>
+    
+                    <div class="slide-box segundo">
+                        <img class="img-desktop" src="imagens/Montagem_Pc_2.png" alt="">
+                        <img class="img-mobile" src="imagens/Montagem_Cell_2.png" alt="">
+                    </div>
+    
+                    <div class="slide-box terceiro">
+                        <img class="img-desktop" src="imagens/Montagem_pc_3.png" alt="">
+                        <img class="img-mobile" src="imagens/Montagem_cell_3.png" alt="">
+                    </div>
+    
+                    <div class="nav-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                    </div>
+    
+                    <div class="nav-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                    </div>
+                </div>
+            </section>
+ 
+            <div class="faq_container">
+                <div class="faq-header">Perguntas frequentes</div>
+                <div class="faq-question">
+                  O que é a Pet.Net?
+                </div>
+                <div class="faq-answer">
+                    Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
+                </div>
+                <div class="faq-question">
+                  Quais regiões atendemos?
+                </div>
+                <div class="faq-answer">
+                    Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
+                </div>
+                <div class="faq-question">
+                  Quais são os nossos serviços?
+                </div>
+                <div class="faq-answer">
+                    <p class="nosso_servico">
+                        <p class="titulo">
+                            Nosso diferencial:
+                        </p>
+                        Buscamos os pets diretamente nas casas dos clientes.
+
+                        <p class="titulo">
+                            Banho e Tosa:
+                        </p>
+
+                        Atendemos animais de pequeno até grande porte. Trabalhamos com produtos de qualidade para o atendimento do seu melhor amigo.
+
+                        <p class="titulo">
+                            Vacinação:
+                        </p>
+
+                        Oferecemos as melhores vacinas do mercado para proteger o seu pet contra doenças. Vacinamos cachorros, gatos, coelhos e outros animais.
+
+                        <p class="titulo">
+                            Consultas Médicas:
+                        </p>
+
+                        Possuimos profissionais qualificados, prontos 24 horas por dia para cuidar do bem estar do seu Pet. Temos atendimento online para dúvidas comuns.
+
+                        <p class="titulo">
+                            Cirurgias:
+                        </p>
+
+                        Temos os melhores e mais qualificados especialistas para realizar cirurgias. Trabalhamos com equipamentos de qualidade, trazendo a segurança necessária na realização de todos os procedimentos.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="ajustar_imagens_servicos">
+                <img src="imagens/4.png" alt="">
+                <img src="imagens/5.png" alt="">
+                <img src="imagens/6.png" alt="">
+                <img src="imagens/7.png" alt="">
+                <img src="imagens/8.png" alt="">
+                <img src="imagens/9.png" alt="">
+            </div>            
+
+            <div id="botao_voltar_para_cima" onclick="scrollToTop()" style="display: none;">
+                <img src="imagens/seta_para_cima.png" alt="">
+            </div>
+
+         </main>
+ 
+         <!-- Rodape -->
+         <footer>
+            <div id="links_uteis">
+                Links úteis
+            </div>
+    
+            <div class="links">
+                <a href="">(19) 3648-8720</a>
+                <a href="">Hospital Veterinário</a>
+            </div>
+    
+            <div class="links">
+                <a href="">Banho & Tosa</a>
+            </div>
+    
+            <br>
+    
+            <hr>
+    
+            <div class="links">
+                <a href="">Traga seu pet e nos faça uma visita</a>
+            </div>
+    
+            <div id="logo_do_footer">
+                <img src="imagens/logo.png" alt="">
+            </div>
+         </footer>
+         <script src="script.js"></script>
+         <script src="servicos.js"></script>
+     </body>
+ </html>

@@ -1,0 +1,347 @@
+<!-- 
+    Este projeto é desenvolvido em conjunto com a disciplina de Programação Web I da Etec Polivalente de Americana 
+    e tem como a finalidade de estudar e aprofundar os conhecimentos  em HTML, CSS e JS.
+
+    Autores:
+    Turma:
+    Data: 
+ -->
+
+ <!DOCTYPE html>
+ <html lang="pt-br">
+     <head>
+             <!-- Required meta tags -->
+             <meta charset="utf-8">
+             <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+             <!-- Sobre o WebSite -->
+ 
+             <title>Pet Ofertas</title>
+             <link rel="icon" href="favicon.ico">
+             <meta name="author" content="Samuel Vieira Leonardo Carrilho Pietro Gimenez Octávio Augusto Pedro Zago Pedro Rodrigues">
+             <meta name="description" content="Projeto feito em parceria com a IBM">
+             <meta name="keywords" content="Pet.Net">
+             <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+             <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+             <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+             <link rel="stylesheet" href="base.css">
+             <link rel="stylesheet" href="Raçoes.css">
+         </head>
+  
+     <body>
+     
+          <!-- Navigation bar -->
+         <header class="header">
+
+            <!-- Logo -->
+            <a href="index.html">
+                <img id="img_logo" src="imagens/logo.png" alt="">
+            </a>
+            <!-- Hamburger icon -->
+            <input class="side-menu" type="checkbox" id="side-menu"/>
+            <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+            <!-- Menu -->
+            <nav class="nav">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="pet_ofertas.html">Pet Ofertas</a></li>
+                </ul>
+
+                <!-- Trilho div inside the menu -->
+                <p>Modo claro e escuro</p>
+                <div class="trilho" id="trilho">
+                    <div class="indicador"></div>
+                </div>
+            </nav>
+
+            <a href="" id="whatsapp-link">
+                <div id="link_telefone">
+                    <img src="imagens/link_telefone.png" alt="">
+                </div>
+            </a>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <script src="script.js"></script>
+         </header>
+ 
+         <!-- Conteúdo Principal -->
+         <main>
+ 
+            <div id="iconcasa">
+                <a href="index.html">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z" clip-rule="evenodd"/>
+                    </svg>     
+                </a>  
+                 <p>> Ofertas do mês</p>
+            </div>
+
+            <details class="mudar_cor_modo_dark">
+                <summary>Categorias</summary>
+                <br>
+                <p><a id="link-voltar" href="pet_ofertas.html">Voltar</a></p>
+                <p><a id="link-remedios" href="Racoes.html">Rações</a></p>
+                <p><a id="link-acessorios" href="Acessorios.html">Acessórios</a></p>
+            </details>
+
+              <!-- HTML do Carrinho -->
+              <div class="container_carrinho">
+                <div class="icon-cart">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+                </svg>
+                <span>0</span> <!-- Quantidade de itens no carrinho -->
+                </div>
+            </div>
+            
+            <div class="cartTab">
+                <h3>Carrinho de Compras</h3>
+                <div class="listCart"></div> <!-- Carrinho estará vazio inicialmente -->
+                <br>
+                <div class="btn">
+                <button class="close">Fechar</button>
+                <button class="checkout">Comprar</button>
+                </div>
+            </div>
+
+            <br><br>
+            <!-- HTML do Produto -->
+            <h3 id="Racao">Antiparasitários para Cães</h3>
+            <div class="container">
+                <div class="gallery-wrapper">
+                  <div class="gallery"> 
+                    <img src="Montagem_Remedios/Vermifugo_Cao_1.png" alt="" class="item current-item">
+                    <div class="container">
+                        <p class="titulo_mais_vendidos">Vermífugo Frontpro
+                            <p class="texto_mais_vendidos">Comprimidos Mastigáveis</p>
+                        </p>
+                        <p class="preco">R$ 30,49</p>
+    
+                        <a class="addCart" href="">Comprar</a>
+                    </div>
+                  </div>
+                  <div class="gallery">
+                        <img src="Montagem_Remedios/Vermifugo_Cao_2.png" alt="" class="item current-item">
+                        <div class="container">
+                            <p class="titulo_mais_vendidos">Vermífugo Ec-pet
+                                <p class="texto_mais_vendidos">Para cães que pesam mais de 40Kg</p>
+                            </p>
+                            <p class="preco">R$ 29,90</p>
+    
+                            <a class="addCart" href="">Comprar</a>
+                        </div>
+                  </div>
+                  <div class="gallery">
+                    <img src="Montagem_Remedios/Vermifugo_Cao_3.png" alt="" class="item current-item">
+                    <div class="container">
+                        <p class="titulo_mais_vendidos">Vermífugo NexGard
+                            <p class="texto_mais_vendidos">Tabletes mastigaveis sabor carne</p>
+                        </p>
+                        <p class="preco">R$ 41,90</p>
+    
+                        <a class="addCart" href="">Comprar</a>
+                    </div>
+                  </div>
+                  <div class="gallery">
+                    <img src="Montagem_Remedios/Vermifugo_Cao_4.png" alt="" class="item current-item">
+                    <div class="container">
+                        <p class="titulo_mais_vendidos">Vermífugo Endogard
+                            <p class="texto_mais_vendidos">Para cães com até 2,5Kg</p>
+                        </p>
+                        <p class="preco">R$ 32,69</p>
+    
+                        <a class="addCart" href="">Comprar</a>
+                    </div>
+                  </div>
+                  <div class="gallery">
+                    <img src="Montagem_Remedios/Vermifugo_Cao_5.png" alt="" class="item current-item">
+                    <div class="container">
+                        <p class="titulo_mais_vendidos">Vermífugo Meltra Plus
+                            <p class="texto_mais_vendidos">Para cães de até 60Kg</p>
+                        </p>
+                        <p class="preco">R$ 45,00</p>
+    
+                        <a class="addCart" href="">Comprar</a>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+            </div>
+            <br><br>
+            <h3 id="Acessorios">Antiparasitários para Gatos</h3>
+            <div class="container">
+                <div class="gallery-wrapper">
+                  <div class="gallery"> 
+                    <img src="Montagem_Remedios/Vermifugo_Gato_1.png" alt="" class="current-item">
+                    <div class="container">
+                        <p class="titulo_mais_vendidos">Vermífugo Advocate
+                            <p class="texto_mais_vendidos">Para gatos entre 2 e 4Kg
+                            </p>
+                        </p>
+                        <p class="preco">R$ 24,89</p>
+    
+                        <a class="addCart" href="">Comprar</a>
+                    </div>
+                  </div>
+                  <div class="gallery">
+                        <img src="Montagem_Remedios/Vermifugo_Gato_2.png" alt="" class="item current-item">
+                        <div class="container">
+                            <p class="titulo_mais_vendidos">Vermífugo Dontral
+                                <p class="texto_mais_vendidos"> Para gatos de até 4Kg
+
+                                </p>
+                            </p>
+                            <p class="preco">R$ 39,59</p>
+    
+                            <a class="addCart" href="">Comprar</a>
+                        </div>
+                  </div>
+                  <div class="gallery">
+                    <img src="Montagem_Remedios/Vermifugo_Gato_3.png" alt="" class="item current-item">
+                    <div class="container">
+                        <p class="titulo_mais_vendidos"> Vermífugo NexGard <br>COMBO
+                            <p class="texto_mais_vendidos">Gatos entre 2,5 - 7,5Kg</p>
+                        </p>
+                        <p class="preco">R$ 42,50</p>
+    
+                        <a class="addCart" href="">Comprar</a>
+                    </div>
+                  </div>
+                  <div class="gallery">
+                    <img src="Montagem_Remedios/Vermifugo_Gato_4.png" alt="" class="item current-item">
+                    <div class="container">
+                        <p class="titulo_mais_vendidos">Vermífugo Milpro 
+                            <p class="texto_mais_vendidos">Gatos com o peso de até 2,5Kg</p>
+                        </p>
+                        <p class="preco">R$ 27,99</p>
+    
+                        <a class="addCart" href="">Comprar</a>
+                    </div>
+                  </div>
+                  <div class="gallery">
+                    <img src="Montagem_Remedios/Vermifugo_Gato_5.png" alt="" class="item current-item">
+                    <div class="container">
+                        <p class="titulo_mais_vendidos">Vermífugo TotalFull
+                            <p class="texto_mais_vendidos">Para gatos com até 3Kg</p>
+                        </p>
+                        <p class="preco">R$ 49,90</p>
+    
+                        <a class="addCart" href="">Comprar</a>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+            </div>
+            <br><br>
+            <h3 id="Remedios">Suplementos Alimentares</h3>
+            <div class="container">
+                <div class="gallery-wrapper">
+                  <div class="gallery"> 
+                    <img src="imagens/suplemento.png" alt="" class="current-item">
+                    <div class="container">
+                        <p class="titulo_mais_vendidos">Suplemento <br> Alimentar
+                            <p class="texto_mais_vendidos">Suplemento alimentar para Cães 30 Tabletes Mastigáveis
+                            </p>
+                        </p>
+                        <p class="preco">R$ 109,99</p>
+    
+                        <a class="addCart" href="">Comprar</a>
+                    </div>
+                  </div>
+                  <div class="gallery">
+                        <img src="imagens/antipulgas e carrapatos.png" alt="" class="item current-item">
+                        <div class="container">
+                            <p class="titulo_mais_vendidos">Antipulgas e <br> Carrapatos
+                                <p class="texto_mais_vendidos">
+                                 Nexgard para Cães 10,1 a 25kg - 3 Comprimidos</p>
+                            </p>
+                            <p class="preco">R$ 249,99</p>
+    
+                            <a class="addCart" href="">Comprar</a>
+                        </div>
+                  </div>
+                  <div class="gallery">
+                    <img src="imagens/remedio.png" alt="" class="item current-item">
+                    <div class="container">
+                        <p class="titulo_mais_vendidos">Simparic 20 Mg
+                            <p class="texto_mais_vendidos">
+                                Proteção contra parasitas por 35 <br> dias.
+                                Para cães de <br> 5,1 a 10 kg.
+                            </p>
+                        </p>
+                        <p class="preco">R$ 79,99</p>
+    
+                        <a class="addCart" href="">Comprar</a>
+                    </div>
+                  </div>
+                  <div class="gallery">
+                    <img src="imagens/remedio_gato.png" alt="" class="item current-item">
+                    <div class="container">
+                        <p class="titulo_mais_vendidos">Petzi Gato 4 <br> Comprimidos
+                            <p class="texto_mais_vendidos">
+                                Previne e controla <br> as verminoses</p>
+                        </p>
+                        <p class="preco">R$ 39,99</p>
+    
+                        <a class="addCart" href="">Comprar</a>
+                    </div>
+                  </div>
+                  <div class="gallery">
+                    <img src="imagens/remedio_gato2.png" alt="" class="item current-item">
+                    <div class="container">
+                        <p class="titulo_mais_vendidos">Vermífugo Chemital
+                            <p class="texto_mais_vendidos">para fêmeas prenhes e filhotes,</p>
+                        </p>
+                        <p class="preco">R$ 49,90</p>
+    
+                        <a class="addCart" href="">Comprar</a>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+            </div>
+
+            <div id="botao_voltar_para_cima" onclick="scrollToTop()" style="display: none;">
+                <img src="imagens/seta_para_cima.png" alt="">
+            </div>
+            
+         </main>
+ 
+         <!-- Rodape -->
+         <footer>
+
+            <div id="links_uteis">
+                Links úteis
+            </div>
+    
+            <div class="links">
+                <a href="">(19) 3648-8720</a>
+                <a href="">Hospital Veterinário</a>
+            </div>
+    
+            <div class="links">
+                <a href="">Banho & Tosa</a>
+            </div>
+    
+            <br>
+    
+            <hr>
+    
+            <div class="links">
+                <a href="">Traga seu pet e nos faça uma visita</a>
+            </div>
+    
+            <div id="logo_do_footer">
+                <img src="imagens/logo.png" alt="">
+            </div>
+            
+         </footer>
+
+         <script src="script.js"></script>
+         <script src="petofertas.js"></script>
+     </body>
+ </html>
